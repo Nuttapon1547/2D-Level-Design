@@ -11,7 +11,6 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        Debug.Log($"{gameObject.name} เกิดแล้ว! เลือด: {currentHealth}");
     }
 
     void OnMouseDown()
@@ -22,7 +21,6 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        Debug.Log($"{gameObject.name} โดนตี! รับดาเมจ: {damage}. เลือดเหลือ: {currentHealth}");
 
         if (currentHealth <= 0)
         {
@@ -32,7 +30,6 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        Debug.Log($"{gameObject.name} ตายแล้ว! กำลังทำลายตัวเอง.");
         Destroy(gameObject);
     }
 }
